@@ -1,5 +1,5 @@
 Bookmark
-Theme Version: 0.9.0
+Theme Version: 0.9.1
 Author: Michael Van Den Berg 
 Author URL: http://michaelvandenberg.com/
 
@@ -55,14 +55,9 @@ Bookmark is based on Underscores http://underscores.me/, (C) 2012-2016 Automatti
 
 -- Images.
 *
-*  The images on the theme screenshot are based on pictures from Gemma Garner, Matthew Wiebe, Christian Joudrey, Daniela Roa, Toni Moeckel and Brooke Lark.
-*  URL: https://unsplash.com/@gemmagarner
-*  URL: https://unsplash.com/@matthewwiebe
-*  URL: https://unsplash.com/@cjoudrey
-*  URL: https://unsplash.com/@danielaroac
-*  URL: https://unsplash.com/@tonimoeckel
-*  URL: https://unsplash.com/@brookelark
-*  All licensed: CC0 / http://creativecommons.org/publicdomain/zero/1.0/
+*  The images on the theme screenshot are based on pictures from Arto Marttinen.
+*  URL: https://unsplash.com/@whiteboytravels
+*  Licensed: CC0 / http://creativecommons.org/publicdomain/zero/1.0/
 *
 
 -- Other.
@@ -81,8 +76,7 @@ Bookmark is based on Underscores http://underscores.me/, (C) 2012-2016 Automatti
 === ToDo ===
 --------------------
 
-1. Needs additional tweaks to css.
-2. Mobile menu still needs to be done.
+1. Better screenshot needed.
 
 
 --------------------
@@ -90,6 +84,13 @@ Bookmark is based on Underscores http://underscores.me/, (C) 2012-2016 Automatti
 --------------------
 
 *
-* 0.9.0 / 19.09.2016
+* 0.9.1 / 01.10.2016
+* - Fixed issue with sidebar not appearing on pages.
+* - Fixed page styling issues.
+* - Added full width page template.
+* - Tweaked font height for smaller screens.
+* - And some more minor tweaks to the scss/css.
+*
+* 0.9.0 / 30.09.2016
 * Initial (early) release.
 *

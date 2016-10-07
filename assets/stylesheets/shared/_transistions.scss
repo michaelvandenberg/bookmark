@@ -1,0 +1,20 @@
+/* Transitions. */
+a,
+.post-navigation span,
+.search-submit .genericon-search {
+	transition: color 0.2s;
+}
+.thumbnail-overlay {
+	transition: opacity 0.2s;
+}
+.more-link {
+	transition: background 0.2s;
+}
+.social-navigation a,
+.social-navigation a,
+.author-description a {
+	transition: all 0.25s;
+}
+.post-thumbnail-link img {
+	transition: opacity 0.25s;
+}

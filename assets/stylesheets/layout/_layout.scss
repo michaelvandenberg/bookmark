@@ -23,6 +23,10 @@ body {
 	@include content-width;
 }
 
+.full-width-page .article-inner {
+	width: 1280px;
+}
+
 /*--------------------------------------------------------------
 ## Single Column / No Active Sidebar
 --------------------------------------------------------------*/

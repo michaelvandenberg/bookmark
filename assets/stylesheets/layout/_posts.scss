@@ -44,18 +44,21 @@
 	vertical-align: text-bottom;
 }
 
-a.comments-link {
+a.comments-link,
+.reply, {
 	display: inline-block;
 	background: $color__text-main;
 	color: white;
 	outline: none;
 	padding: 0.5rem 1.25rem;
 	border-radius: 5px;
-	line-height:1.25em;
-	@include font-size(1.25);
+	line-height:1.125em;
+	margin-right: 0.5rem;
+	@include font-size(1.125);
 }
 
-.comments-link-text {
+.comments-link-text,
+.comment-reply-link {
 	z-index: 2;
 	position: relative;
 	text-shadow: 0px 0px 5px rgba(33, 34, 35, 1);
@@ -64,4 +67,12 @@ a.comments-link {
 .more-link {
 	display: table;
 	margin-top: 1rem;
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+	a.comments-link,
+	.reply, {
+		line-height:1.25em;
+		@include font-size(1.25);
+	}
 }

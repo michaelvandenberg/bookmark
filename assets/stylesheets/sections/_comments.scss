@@ -39,7 +39,6 @@
 .comment-meta {
 	display: block;
 	min-height: 48px;
-	margin-bottom: 0.75em;
 }
 .comment-metadata {
 	font-size: 90%;
@@ -49,6 +48,7 @@
 	.avatar {
 		float: left;
 		margin-right: 12px;
+		transform: translateY(7px);
 	}
 }
 .children {
@@ -68,6 +68,13 @@
 }
 .bypostauthor {
 	display: block;
+}
+.reply {
+	padding: 0.5rem 1rem;
+	line-height:1em;
+}
+.comment-reply-link {
+	@include font-size(1);
 }
 
 /* Comment form. */

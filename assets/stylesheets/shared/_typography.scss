@@ -6,7 +6,7 @@ textarea {
 	color: $color__text-main;
 	font-family: $font__main;
 	font-weight: 300;
-	@include font-size(1.375);
+	@include font-size(1.125);
 	line-height: $font__line-height-body;
 }
 
@@ -96,8 +96,6 @@ strong, b {
 	font-weight: 400;
 }
 
-
-
 .entry-title {
 	font-size: 2.25em;
 	line-height: 1.45;
@@ -110,14 +108,14 @@ strong, b {
 }
 
 .widget-title {
-	@include font-size(1.35);
+	@include font-size(1.125);
 	margin: 0 0 1em 0;
 }
 
 .entry-meta,
 .cat-links,
 .entry-footer {
-	@include font-size(1.25);
+	@include font-size(1.125);
 }
 
 .cat-links {
@@ -141,7 +139,7 @@ strong, b {
 .intro-enabled {
 	.post .entry-content > p:first-of-type {
 		font-weight: 400;
-		@include font-size(1.45);
+		@include font-size(1.25);
 	}
 	.post .entry-content > p:first-of-type::first-letter {
 		//display: block;
@@ -151,5 +149,60 @@ strong, b {
 		//font-size: 325%;
 		//padding: 0.125rem 0.40rem 0 0;
 		//color: $color__link-hover;
+	}
+}
+
+.wp-caption-text {
+	font-style: italic;
+	font-size: 0.85em;
+}
+
+.widget {
+	@include font-size(1.125);
+}
+
+@media screen and (min-width: $breakpoint-small) {
+	body,
+	button,
+	input,
+	select,
+	textarea {
+		@include font-size(1.25);
+	}
+	.widget-title {
+		@include font-size(1.25);
+	}
+	.intro-posts-only,
+	.intro-enabled {
+		.post .entry-content > p:first-of-type {
+			@include font-size(1.35);
+		}
+	}
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+	body,
+	button,
+	input,
+	select,
+	textarea {
+		@include font-size(1.375);
+	}
+	.entry-meta,
+	.cat-links,
+	.entry-footer {
+		@include font-size(1.25);
+	}
+	.widget-title {
+		@include font-size(1.35);
+	}
+	.intro-posts-only,
+	.intro-enabled {
+		.post .entry-content > p:first-of-type {
+			@include font-size(1.45);
+		}
+	}
+	.widget {
+		@include font-size(1.25);
 	}
 }

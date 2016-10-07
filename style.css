@@ -1,14 +1,14 @@
 /*
 Theme Name: Bookmark
-Theme URI: http://components.underscores.me/
+Theme URI: https://michaelvandenberg.com/portfolio/bookmark/
 Author: Michael Van Den Berg
 Author URI: https://michaelvandenberg.com/
-Description: 12/08/2016
-Version: 1.0.0
+Description: 30/09/2016
+Version: 0.9.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bookmark
-Tags:
+Tags: one-column, accessibility-ready, custom-background, custom-menu, custom-header, featured-images, full-width-template, theme-options, threaded-comments, blog
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -33,6 +33,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Formatting
 # Lists
 # Tables
+# Transitions
 # Navigation
 # Links
 # Layout
@@ -304,6 +305,12 @@ th {
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
+.alignnone {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .alignleft {
   display: inline;
   float: left;
@@ -391,8 +398,8 @@ textarea {
   color: #212223;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
-  font-size: 22px;
-  font-size: 1.375rem;
+  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.55;
 }
 
@@ -492,16 +499,16 @@ strong, b {
 }
 
 .widget-title {
-  font-size: 21.6px;
-  font-size: 1.35rem;
+  font-size: 18px;
+  font-size: 1.125rem;
   margin: 0 0 1em 0;
 }
 
 .entry-meta,
 .cat-links,
 .entry-footer {
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .cat-links {
@@ -522,10 +529,74 @@ strong, b {
 .intro-posts-only .post .entry-content > p:first-of-type,
 .intro-enabled .post .entry-content > p:first-of-type {
   font-weight: 400;
-  font-size: 23.2px;
-  font-size: 1.45rem;
+  font-size: 20px;
+  font-size: 1.25rem;
 }
 
+.wp-caption-text {
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+.widget {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+@media screen and (min-width: 480px) {
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+
+  .widget-title {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+
+  .intro-posts-only .post .entry-content > p:first-of-type,
+  .intro-enabled .post .entry-content > p:first-of-type {
+    font-size: 21.6px;
+    font-size: 1.35rem;
+  }
+}
+@media screen and (min-width: 720px) {
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+
+  .entry-meta,
+  .cat-links,
+  .entry-footer {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+
+  .widget-title {
+    font-size: 21.6px;
+    font-size: 1.35rem;
+  }
+
+  .intro-posts-only .post .entry-content > p:first-of-type,
+  .intro-enabled .post .entry-content > p:first-of-type {
+    font-size: 23.2px;
+    font-size: 1.45rem;
+  }
+
+  .widget {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -706,20 +777,48 @@ textarea {
   }
 }
 /*--------------------------------------------------------------
-# Forms
+# Buttons
 --------------------------------------------------------------*/
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background: #202020;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: .6em 1em .4em;
+  border: 0;
+  background: #212223;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 5px;
+  line-height: 1.125em;
+  font-size: 18px;
+  font-size: 1.125rem;
+  text-shadow: 0px 0px 5px #212223;
+}
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  box-shadow: 0px 1px 1.5px 1px rgba(0, 0, 0, 0.12);
+}
+button:active, button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+  box-shadow: 0px 8px 20px 1px rgba(0, 0, 0, 0.3);
 }
 
+@media screen and (min-width: 720px) {
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    line-height: 1.25em;
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
 /*--------------------------------------------------------------
 ## Waves
 --------------------------------------------------------------*/
@@ -927,12 +1026,45 @@ tfoot tr td {
 }
 
 /*--------------------------------------------------------------
+# Transitions
+--------------------------------------------------------------*/
+/* Transitions. */
+a,
+.post-navigation span,
+.search-submit .genericon-search {
+  -webkit-transition: color 0.25s;
+          transition: color 0.25s;
+}
+
+.more-link,
+.site-title a,
+.post-navigation a,
+.flickity-prev-next-button {
+  -webkit-transition: background 0.25s;
+          transition: background 0.25s;
+}
+
+.menu-toggle,
+.social-menu-wrapper a {
+  -webkit-transition: all 0.25s;
+          transition: all 0.25s;
+}
+
+.post-thumbnail-link img {
+  -webkit-transition: opacity 0.25s;
+          transition: opacity 0.25s;
+}
+
+/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 #primary-navigation {
   padding-top: 2rem;
 }
 
+.primary-menu-wrapper {
+  margin-bottom: 1em;
+}
 .primary-menu-wrapper .menu,
 .primary-menu-wrapper .sub-menu {
   margin: 0;
@@ -974,12 +1106,12 @@ tfoot tr td {
   right: 12px;
   z-index: 2;
   min-height: 54px;
+  padding: 0.5rem 1rem;
   border-radius: 0;
   border: 3px solid white;
+  background: transparent;
   font-size: 12px;
   font-size: 0.75rem;
-  background: #161718;
-  box-shadow: 0px 0px 2px 2px #161718;
 }
 
 .toggle-text {
@@ -1057,7 +1189,8 @@ tfoot tr td {
 .menu-toggle:focus,
 .menu-toggled:hover,
 .menu-toggled:focus {
-  border-color: white;
+  background: #161718;
+  box-shadow: 0px 0px 2px 2px #161718;
 }
 
 .social-menu-wrapper {
@@ -1071,6 +1204,7 @@ tfoot tr td {
 }
 .social-menu-wrapper .menu-item {
   display: inline;
+  margin: 0.25em;
 }
 .social-menu-wrapper a {
   display: inline-block;
@@ -1080,13 +1214,14 @@ tfoot tr td {
   text-decoration: none;
 }
 .social-menu-wrapper a::before {
+  display: inline-block;
   content: '\f475';
   speak: none;
   color: white;
-  line-height: 24px;
+  line-height: 28px;
   font-family: 'Genericons';
   font-weight: normal;
-  font-size: 24px;
+  font-size: 28px;
   -webkit-transition: -webkit-transform 0.125s, color 0.125s ease-in-out;
           transition: transform 0.125s, color 0.125s ease-in-out;
   vertical-align: middle;
@@ -1281,7 +1416,7 @@ tfoot tr td {
   }
   #social-right .social-menu-wrapper li.menu-item {
     display: block;
-    margin-left: 4px;
+    margin: 0 0 0 4px;
   }
   #social-right .social-menu-wrapper a {
     padding: 0;
@@ -1289,7 +1424,11 @@ tfoot tr td {
     width: 40px;
   }
   #social-right .social-menu-wrapper a::before {
-    display: inline-block;
+    -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+            transform: translateY(0px);
+    line-height: 24px;
+    font-size: 24px;
   }
   #social-right .social-menu-wrapper a::after {
     content: "";
@@ -1455,6 +1594,10 @@ body {
   margin: 0 auto;
 }
 
+.full-width-page .article-inner {
+  width: 1280px;
+}
+
 /*--------------------------------------------------------------
 ## Single Column / No Active Sidebar
 --------------------------------------------------------------*/
@@ -1517,19 +1660,22 @@ body {
   vertical-align: text-bottom;
 }
 
-a.comments-link {
+a.comments-link,
+.reply {
   display: inline-block;
   background: #212223;
   color: white;
   outline: none;
   padding: 0.5rem 1.25rem;
   border-radius: 5px;
-  line-height: 1.25em;
-  font-size: 20px;
-  font-size: 1.25rem;
+  line-height: 1.125em;
+  margin-right: 0.5rem;
+  font-size: 18px;
+  font-size: 1.125rem;
 }
 
-.comments-link-text {
+.comments-link-text,
+.comment-reply-link {
   z-index: 2;
   position: relative;
   text-shadow: 0px 0px 5px #212223;
@@ -1540,12 +1686,24 @@ a.comments-link {
   margin-top: 1rem;
 }
 
+@media screen and (min-width: 720px) {
+  a.comments-link,
+  .reply {
+    line-height: 1.25em;
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
 /*--------------------------------------------------------------
 ## Pages
 --------------------------------------------------------------*/
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+
+.full-width-page .post-thumbnail {
+  margin: 1.125em 0 0.25em;
 }
 
 /*--------------------------------------------------------------
@@ -1598,7 +1756,6 @@ a.comments-link {
 .comment-meta {
   display: block;
   min-height: 48px;
-  margin-bottom: 0.75em;
 }
 
 .comment-metadata {
@@ -1608,6 +1765,9 @@ a.comments-link {
 .comment-author .avatar {
   float: left;
   margin-right: 12px;
+  -webkit-transform: translateY(7px);
+      -ms-transform: translateY(7px);
+          transform: translateY(7px);
 }
 
 .children {
@@ -1630,6 +1790,16 @@ a.comments-link {
 
 .bypostauthor {
   display: block;
+}
+
+.reply {
+  padding: 0.5rem 1rem;
+  line-height: 1em;
+}
+
+.comment-reply-link {
+  font-size: 16px;
+  font-size: 1rem;
 }
 
 /* Comment form. */
@@ -1696,8 +1866,6 @@ textarea#comment:focus {
   margin: 0em;
   padding: 24px 0;
   margin-bottom: 3rem;
-  font-size: 20px;
-  font-size: 1.25rem;
   /* Make sure select elements fit in widgets. */
 }
 .widget ul,
@@ -2039,8 +2207,8 @@ article.page,
   font-family: "Source Sans Pro", sans-serif;
   text-transform: uppercase;
   letter-spacing: 4px;
-  font-size: 33.6px;
-  font-size: 2.1rem;
+  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .site-title a {
@@ -2054,10 +2222,21 @@ article.page,
 }
 
 .site-description {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 16px;
+  font-size: 1rem;
 }
 
+@media screen and (min-width: 720px) {
+  .site-title {
+    font-size: 33.6px;
+    font-size: 2.1rem;
+  }
+
+  .site-description {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
 /*--------------------------------------------------------------
 # Site footer
 --------------------------------------------------------------*/

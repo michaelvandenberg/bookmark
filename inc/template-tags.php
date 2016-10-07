@@ -138,17 +138,27 @@ function bookmark_post_thumbnail() {
 		return;
 	} ?>
 
+	<?php if ( is_page_template( 'page-templates/template-full-width.php' ) ) :
+
+		$featured = 'bookmark-featured-large';
+
+	else :
+
+		$featured = 'bookmark-featured-image';
+
+	endif; // End is_page_template() ?>
+
 	<?php if ( is_singular() ) : ?>
 
 		<div class="post-thumbnail">
-			<?php the_post_thumbnail( 'bookmark-featured-image', array( 'alt' => get_the_title() ) ); ?>
+			<?php the_post_thumbnail( $featured, array( 'alt' => get_the_title() ) ); ?>
 		</div><!-- .post-thumbnail -->
 
 	<?php else : ?>
 
 		<div class="post-thumbnail">
 			<a class="post-thumbnail-link" href="<?php esc_url( the_permalink() ); ?>" aria-hidden="true">
-				<?php the_post_thumbnail( 'bookmark-featured-image', array( 'alt' => get_the_title() ) ); ?>
+				<?php the_post_thumbnail( $featured, array( 'alt' => get_the_title() ) ); ?>
 			</a>
 		</div><!-- .post-thumbnail -->
 

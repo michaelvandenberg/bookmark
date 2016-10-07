@@ -10,6 +10,7 @@
 
 	.menu-item {
 		display: inline;
+		margin: 0.25em;
 	}
 
 	a {
@@ -21,13 +22,14 @@
 	}
 
 	a::before {
+		display: inline-block;
 		content: '\f475';
 		speak: none;
 		color: white;
-		line-height: 24px;
+		line-height: 28px;
 		font-family: 'Genericons';
 		font-weight: normal;
-		font-size: 24px;
+		font-size: 28px;
 		transition: transform 0.125s, color 0.125s ease-in-out;
 		vertical-align: middle;
 		text-align: center;
@@ -262,7 +264,7 @@
 
 			li.menu-item {
 				display: block;
-				margin-left: 4px;
+				margin: 0 0 0 4px;
 			}
 
 			a {
@@ -272,7 +274,9 @@
 			}
 
 			a::before {
-				display: inline-block;
+				transform: translateY(0px);
+				line-height: 24px;
+				font-size: 24px;
 			}
 
 			a::after {

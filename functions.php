@@ -43,7 +43,7 @@ function bookmark_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'bookmark-navigation', 800, 160, true );
 	add_image_size( 'bookmark-featured-image', 800, 9999 );
-	add_image_size( 'bookmark-large', 2000, 1500, true );
+	add_image_size( 'bookmark-featured-large', 1280, 9999 );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -66,7 +66,6 @@ function bookmark_setup() {
 	 * to output valid HTML5.
 	 */
 	add_theme_support( 'html5', array(
-		'search-form',
 		'comment-form',
 		'comment-list',
 		'gallery',
@@ -93,6 +92,16 @@ function bookmark_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'bookmark_content_width', 800 );
 }
 add_action( 'after_setup_theme', 'bookmark_content_width', 0 );
+
+/**
+ * Adjust content_width value for full width page template. parse_query   the_post
+ */
+function bookmark_full_width_page_content_width() {
+	if ( is_page_template( 'page-templates/template-full-width.php' ) ) {	
+		$GLOBALS['content_width'] = apply_filters( 'bookmark_full_width_page_content_width', 1280 );
+	}
+}
+add_action( 'template_redirect', 'bookmark_full_width_page_content_width' );
 
 /**
  * Return early if Custom Logos are not available.

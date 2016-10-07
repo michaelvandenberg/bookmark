@@ -43,7 +43,7 @@
 	font-family: $font__main;
 	text-transform: uppercase;
 	letter-spacing: 4px;
-	@include font-size(2.1);
+	@include font-size(1.5);
 }
 .site-title a {
 	display: inline-block;
@@ -58,5 +58,14 @@
 	}
 }
 .site-description {
-	@include font-size(1.125);
+	@include font-size(1.0);
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+	.site-title {
+		@include font-size(2.1);
+	}
+	.site-description {
+		@include font-size(1.125);
+	}
 }
