@@ -1,0 +1,17 @@
+#top-bar,
+.header-inner,
+#navigation-bar,
+article.post,
+article.page,
+.navigation,
+.comments-list-container,
+.comment-form-container,
+.widget-area {
+	border-bottom: 1px solid rgba(0,0,0,0.14);
+}
+
+.entry-meta,
+.single-footer {
+	border-top: 1px solid rgba(0,0,0,0.14);
+	border-bottom: 1px solid rgba(0,0,0,0.14);
+}

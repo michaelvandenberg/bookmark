@@ -1,0 +1,67 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0;
+}
+
+.hentry,
+.comments-list-container,
+.comment-form-container,
+.post-navigation {
+	padding: 3.5em 0;
+}
+
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 0;
+}
+
+.entry-meta,
+.single-footer {
+	display: inline-block;
+	margin-bottom: 1em;
+	padding: 0.1em 0.25em;
+}
+
+.small-avatar img {
+	height: 25px;
+	width: 25px;
+	height: 1.25em;
+	width: 1.25em;
+	border-radius: 50%;
+	vertical-align: text-bottom;
+}
+
+a.comments-link {
+	display: inline-block;
+	background: $color__text-main;
+	color: white;
+	outline: none;
+	padding: 0.5rem 1.25rem;
+	border-radius: 5px;
+	line-height:1.25em;
+	@include font-size(1.25);
+}
+
+.comments-link-text {
+	z-index: 2;
+	position: relative;
+	text-shadow: 0px 0px 5px rgba(33, 34, 35, 1);
+}
+
+.more-link {
+	display: table;
+	margin-top: 1rem;
+}

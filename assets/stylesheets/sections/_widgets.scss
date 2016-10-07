@@ -1,0 +1,95 @@
+#secondary {
+	padding: 2em 0;
+	color: $color__text-secondary;
+	background: $color__background-widgets;
+}
+
+.widget {
+	margin: 0em;
+	padding: 24px 0;
+	margin-bottom: 3rem;
+	@include font-size(1.25);
+
+	ul,
+	ul.sub-menu,
+	ul.children {
+		margin-left: 24px;
+		margin-left: 1.5rem;
+	}
+	li:not(:first-child) {
+		margin-top: 8px;
+		margin-top: 0.5rem;
+	}
+	&.widget_recent_comments,
+	&.widget_categories,
+	&.widget_archive,
+	&.widget_recent_entries,
+	&.widget_rss,
+	&.widget_meta,
+	&.widget_pages,
+	&.widget_links,
+	&.widget_nav_menu {
+		ul {
+			margin: 0;
+			padding-left: 0;
+			list-style: none;
+		}
+		ul.sub-menu,
+		ul.children {
+			margin-left: 24px;
+			margin-left: 1.5rem;
+			li {
+				margin-top: 8px;
+				margin-top: 0.5rem;
+			}
+		}
+	}
+	&.widget_recent_comments,
+	&.widget_recent_entries,
+	&.widget_categories,
+	&.widget_archive,
+	&.widget_rss,
+	&.widget_meta,
+	&.widget_pages,
+	&.widget_links,
+	&.widget_tag_cloud {
+		li {
+			padding-bottom: 4px;
+		}
+		a {
+			display: inline-block;
+			text-decoration: none;
+			border-bottom-color: transparent;
+		}
+	}
+	&.widget_calendar {
+		caption {
+			margin-bottom: 4px;
+		}
+		tbody td {
+			text-align: center;
+		}
+	}
+	&.widget_tag_cloud {
+		a {
+			
+		}
+	}
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+}
+
+@media screen and (min-width: $breakpoint-large) {
+	.widgets-container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		.widget {
+			width: 30%;
+		}
+	}
+}

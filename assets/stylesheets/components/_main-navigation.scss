@@ -1,0 +1,120 @@
+#primary-navigation {
+	padding-top: 2rem;
+}
+
+.primary-menu-wrapper {
+	.menu,
+	.sub-menu {
+		margin: 0;
+		padding: 0;
+	}
+	.menu-item {
+		text-align: center;
+	}
+	.menu-item a {
+		color: white;
+		@include font-size(1.5);
+		text-decoration: none;
+	}
+	.sub-menu .menu-item a {
+		opacity: 0.9;
+		@include font-size(1.25);
+	}
+	.sub-menu .sub-menu .menu-item a {
+		opacity: 0.8;
+		@include font-size(1);
+	}
+	.menu-item a:hover,
+	.menu-item a:focus,
+	.sub-menu .menu-item a:hover,
+	.sub-menu .menu-item a:focus,
+	.sub-menu .sub-menu .menu-item a:hover,
+	.sub-menu .sub-menu .menu-item a:focus {
+		color: $color__link-hover;
+	}
+}
+
+/* Menu toggle. */
+.menu-toggle {
+	display: block;
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	z-index: 2;
+	min-height: 54px; 
+	border-radius: 0;
+	border: 3px solid white;
+	@include font-size(0.75);
+	background: #161718;
+	box-shadow: 0px 0px 2px 2px rgba(22,23,24,1);
+}
+.toggle-text {
+	display: inline-block;
+	margin-right: 8px;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	color: white;
+}
+.toggle-lines {
+	display: inline-block;
+	position: relative;
+	top: -4px;
+	right: 0;
+	width: 24px;
+	height: 3px;
+	background: white;
+	transition: background 0s 0.3s;
+}
+.toggle-lines::before,
+.toggle-lines::after {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: white;
+	content: "";
+	transition-duration: 0.3s, 0.3s;
+	transition-delay: 0.3s, 0s;
+}
+.toggle-lines::before {
+	top: -8px;
+	transition-property: top, transform;
+}
+.toggle-lines::after {
+	bottom: -8px;
+	transition-property: bottom, transform;
+}
+.menu-toggled .togglelines,
+.menu-toggled .toggle-lines::before,
+.menu-toggled .toggle-lines::after {
+
+}
+.menu-toggled .toggle-lines {
+	background: none;
+}
+.menu-toggled .toggle-lines::before,
+.menu-toggled .toggle-lines::after {
+	transition-delay: 0s, 0.3s;
+}
+.menu-toggled .toggle-lines::before {
+	top: 0;
+	transform: rotate(45deg);
+}
+.menu-toggled .toggle-lines::after {
+	bottom: 0;
+	transform: rotate(-45deg);
+}
+.menu-toggle:hover,
+.menu-toggle:focus,
+.menu-toggled:hover,
+.menu-toggled:focus {
+	border-color: white;
+}
+
+
+
+
+
+
+

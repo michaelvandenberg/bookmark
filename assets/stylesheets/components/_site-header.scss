@@ -1,0 +1,62 @@
+#hidden-header {
+	background: $color__text-main;
+
+	.container {
+		padding: 2em;
+	}
+}
+
+.header-inner {
+	
+}
+
+.bar {
+	min-height: 70px;
+	padding: 0 1rem;
+}
+
+.header-inner {
+	background-size: cover!important;
+	background-repeat: no-repeat!important;
+	background-position: center!important;
+}
+
+.overlay-header {
+	height: 100%;
+	width: 100%;
+	padding: 4em 2em;
+	background-image: linear-gradient(to bottom right,rgba(33, 34, 35, 0.75),rgba(204,0,0,0.75));
+}
+
+.site-branding {
+	
+}
+.site-title,
+.site-description {
+	color: white;
+	text-align: center;
+	text-shadow: 0px 0px 2px $color__text-main;
+}
+.site-title {
+	margin: 1.25em 0;
+	font-weight: bold;
+	font-family: $font__main;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	@include font-size(2.1);
+}
+.site-title a {
+	display: inline-block;
+	padding: 0.25em 0.75em;
+	border: 3px solid white;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: white;
+		background: rgba(0, 0, 0, 0.5);
+	}
+}
+.site-description {
+	@include font-size(1.125);
+}
