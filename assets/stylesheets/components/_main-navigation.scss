@@ -32,7 +32,7 @@
 	.sub-menu .menu-item a:focus,
 	.sub-menu .sub-menu .menu-item a:hover,
 	.sub-menu .sub-menu .menu-item a:focus {
-		color: $color__link-hover;
+		//color: $color__link-hover;
 	}
 }
 
@@ -81,16 +81,11 @@
 }
 .toggle-lines::before {
 	top: -8px;
-	transition-property: top, transform;
+	transition: top 0.3s 0.3s, transform 0.3s, 0s;
 }
 .toggle-lines::after {
 	bottom: -8px;
-	transition-property: bottom, transform;
-}
-.menu-toggled .togglelines,
-.menu-toggled .toggle-lines::before,
-.menu-toggled .toggle-lines::after {
-
+	transition: bottom 0.3s 0.3s, transform 0.3s, 0s;
 }
 .menu-toggled .toggle-lines {
 	background: none;
@@ -114,10 +109,3 @@
 	background: #161718;
 	box-shadow: 0px 0px 2px 2px rgba(22,23,24,1);
 }
-
-
-
-
-
-
-

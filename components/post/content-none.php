@@ -11,7 +11,9 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'bookmark' ); ?></h1>
+		<div class="page-header-inner">
+			<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'bookmark' ); ?></h1>
+		</div>
 	</header>
 	<div class="page-content">
 		<?php

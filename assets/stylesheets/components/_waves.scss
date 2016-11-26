@@ -143,7 +143,8 @@
     @include waves-transition(all 300ms);
 
     &:active,
-    &:focus {
+    &:focus,
+    &:hover {
         @include waves-box-shadow(0px 8px 20px 1px rgba(0, 0, 0, 0.30));
     }
 }

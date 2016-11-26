@@ -18,6 +18,8 @@ body {
 
 .article-inner,
 .nav-links,
+.page-content,
+.page-header-inner,
 .comments-inner,
 .comment-form-inner {
 	@include content-width;
@@ -25,6 +27,10 @@ body {
 
 .full-width-page .article-inner {
 	width: 1280px;
+}
+
+body.search .page-content {
+	margin: 0 auto;
 }
 
 /*--------------------------------------------------------------

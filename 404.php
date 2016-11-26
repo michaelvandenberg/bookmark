@@ -14,7 +14,9 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bookmark' ); ?></h1>
+					<div class="page-header-inner">
+						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bookmark' ); ?></h1>
+					</div>
 				</header>
 				<div class="page-content">
 					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'bookmark' ); ?></p>
@@ -57,4 +59,5 @@ get_header(); ?>
 		</main>
 	</div>
 <?php
+get_sidebar();
 get_footer();

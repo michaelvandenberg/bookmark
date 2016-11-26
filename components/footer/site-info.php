@@ -8,5 +8,5 @@
 		<?php } ?>
 		<span class="generator"><?php echo esc_html__( 'Powered by ', 'bookmark' ) ?><a href="<?php echo esc_url( __( 'http://wordpress.org/', 'bookmark' ) ); ?>" rel="generator">WordPress</a></span>
 		<span class="sep"> | </span>
-		<span class="designer"><?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'bookmark' ), '<a href="http://michaelvandenberg.com/portfolio/bookmark/" rel="theme">Bookmark</a>', 'Michael Van Den Berg' ); ?></span>
+		<span class="designer"><?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'bookmark' ), '<a href="https://michaelvandenberg.com/themes/#bookmark" rel="theme">Bookmark</a>', 'Michael Van Den Berg' ); ?></span>
 </div><!-- .site-info -->

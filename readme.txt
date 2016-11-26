@@ -1,7 +1,7 @@
 Bookmark
-Theme Version: 0.9.1
+Theme Version: 1.0.0
 Author: Michael Van Den Berg 
-Author URL: http://michaelvandenberg.com/
+Author URL: https://michaelvandenberg.com/
 
 --------------------
 === Description ===
@@ -15,7 +15,7 @@ A free blogging theme with nice typography.
 --------------------
 
 Bookmark WordPress Theme, Copyright 2016 Michael Van Den Berg.
-Bookmark is distributed under the terms of the GNU GPL license 2.0 or later.
+Bookmark is distributed under the terms of the GNU GPL license 3.0 or later.
 
 Bookmark is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 
@@ -73,16 +73,18 @@ Bookmark is based on Underscores http://underscores.me/, (C) 2012-2016 Automatti
 
 
 --------------------
-=== ToDo ===
---------------------
-
-1. Better screenshot needed.
-
-
---------------------
 === Changelog ===
 --------------------
 
+*
+* 1.0.0 / 26.11.2016
+* - Changed theme URI to: https://michaelvandenberg.com/themes/#bookmark
+* - Optimized screenshot.png (reduced file size by 79%).
+* - Added sidebar to search, 404 and not-found pages.
+* - Fixed content width of search, 404 and not-found pages.
+* - Fixed title width of pages listed above, and the archives.
+* - Fixed color of search field and search submit in widgets and pages.
+* - Fixed accessibility issues. This theme should pass the accessibility review.
 *
 * 0.9.1 / 01.10.2016
 * - Fixed issue with sidebar not appearing on pages.

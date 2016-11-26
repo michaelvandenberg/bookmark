@@ -17,12 +17,12 @@
 	</footer>
 
 	<?php if ( has_nav_menu( 'social' ) ) { ?>
-		<div id="social-right" class="social-navigation">
+		<div id="social-right" class="social-navigation" role="navigation">
 				<?php get_template_part( 'components/header/navigation', 'social' ); ?>
 		</div><!-- .social-right -->
 	<?php } ?>
 
-	<a href="#content" class="back-to-top">Top</a>
+	<a href="#content" class="back-to-top"><?php echo esc_html_x( 'Top', 'Back to top: four letters max.', 'bookmark' ); ?></a>
 </div>
 <?php wp_footer(); ?>
 

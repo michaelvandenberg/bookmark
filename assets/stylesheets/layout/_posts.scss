@@ -9,7 +9,8 @@
 .hentry,
 .comments-list-container,
 .comment-form-container,
-.post-navigation {
+.post-navigation,
+body.search .page-content {
 	padding: 3.5em 0;
 }
 
@@ -67,6 +68,18 @@ a.comments-link,
 .more-link {
 	display: table;
 	margin-top: 1rem;
+}
+
+//Exceptions:
+body.search .page-content {
+	padding-top: 2.5em;
+}
+section.no-results {
+	.search-field,
+	.genericon-search {
+		text-shadow: none;
+		color: $color__text-main;
+	}
 }
 
 @media screen and (min-width: $breakpoint-medium) {

@@ -56,7 +56,7 @@
 			padding-bottom: 4px;
 		}
 		a {
-			display: inline-block;
+			display: inline;
 			text-decoration: none;
 			border-bottom-color: transparent;
 		}
@@ -72,6 +72,17 @@
 	&.widget_tag_cloud {
 		a {
 			
+		}
+	}
+	&.widget_search {
+		.search-field,
+		.genericon-search {
+			text-shadow: none;
+			color: $color__text-main;
+		}
+		.search-submit:hover .genericon-search,
+		.search-submit:focus .genericon-search {
+			color: $color__link-hover;
 		}
 	}
 
