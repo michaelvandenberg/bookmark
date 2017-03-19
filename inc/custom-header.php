@@ -22,7 +22,7 @@
 function bookmark_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'bookmark_custom_header_args', array(
 		'default-image'          => get_template_directory_uri() . '/assets/images/default-header.jpg',
-		'default-text-color'     => '161718',
+		'default-text-color'     => 'ffffff',
 		'width'                  => 1500,
 		'height'                 => 300,
 		'flex-height'            => true,
@@ -79,8 +79,20 @@ function bookmark_header_style() {
 		else :
 	?>
 		.site-title a,
-		.site-description {
+		.site-description,
+		.site-title a:hover,
+		.site-title a:focus,
+		.site-title a:active {
 			color: #<?php echo esc_attr( $header_text_color ); ?>;
+			border-color: #<?php echo esc_attr( $header_text_color ); ?>;
+		}
+		.menu-toggle {
+			border-color: #<?php echo esc_attr( $header_text_color ); ?>;
+		}
+		.toggle-lines,
+		.toggle-lines::before,
+		.toggle-lines::after {
+			background-color: #<?php echo esc_attr( $header_text_color ); ?>;
 		}
 	<?php endif; ?>
 	</style>

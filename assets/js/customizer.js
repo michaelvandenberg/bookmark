@@ -5,6 +5,7 @@
  *
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
+ /* globals wp */
 
 ( function( $ ) {
 
@@ -33,8 +34,12 @@
 					'clip': 'auto',
 					'position': 'relative'
 				} );
-				$( '.site-title a, .site-description' ).css( {
-					'color': to
+				$( '.site-title a, .site-description, .menu-toggle' ).css( {
+					'color': to,
+					'border-color': to
+				} );
+				$( '.toggle-lines, .toggle-lines::before, .toggle-lines::after' ).css( {
+					'background-color': to,
 				} );
 			}
 		} );

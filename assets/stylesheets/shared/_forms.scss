@@ -132,6 +132,7 @@ textarea {
 			&:hover,
 			&:focus {
 				color: white;
+				transform: scale(1.5);
 			}
 		}
 		.search-submit .genericon {
@@ -140,7 +141,7 @@ textarea {
 		}
 		.search-submit:hover .genericon,
 		.search-submit:focus .genericon {
-			color: $color__link-hover;
+			color: white;
 		}
 	}
 }

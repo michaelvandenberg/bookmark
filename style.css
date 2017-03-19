@@ -3,8 +3,8 @@ Theme Name: Bookmark
 Theme URI: https://michaelvandenberg.com/themes/#bookmark
 Author: Michael Van Den Berg
 Author URI: https://michaelvandenberg.com/
-Description: A free blogging theme for WordPress with nice typography.
-Version: 1.0.0
+Description: A free blogging theme with nice typography and customizable colors.
+Version: 1.0.1
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: bookmark
@@ -754,6 +754,8 @@ textarea {
 
 #primary-search .search-form .search-submit:hover, #primary-search .search-form .search-submit:focus {
   color: white;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 #primary-search .search-form .search-submit .genericon {
@@ -763,7 +765,7 @@ textarea {
 
 #primary-search .search-form .search-submit:hover .genericon,
 #primary-search .search-form .search-submit:focus .genericon {
-  color: #cc0000;
+  color: white;
 }
 
 @media screen and (min-width: 720px) {
@@ -1057,13 +1059,14 @@ a,
 
 .more-link,
 .site-title a,
-.post-navigation a,
 .flickity-prev-next-button {
   -webkit-transition: background 0.25s;
   transition: background 0.25s;
 }
 
 .menu-toggle,
+.search-submit,
+.post-navigation a,
 .social-menu-wrapper a {
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
@@ -1159,10 +1162,6 @@ a,
   height: 3px;
   background-color: white;
   content: "";
-  -webkit-transition-duration: 0.3s, 0.3s;
-          transition-duration: 0.3s, 0.3s;
-  -webkit-transition-delay: 0.3s, 0s;
-          transition-delay: 0.3s, 0s;
 }
 
 .toggle-lines::before {
@@ -1572,6 +1571,7 @@ a,
 .post-navigation a:hover,
 .post-navigation a:focus {
   color: white;
+  box-shadow: 0px 8px 20px 1px rgba(0, 0, 0, 0.3);
   background: rgba(0, 0, 0, 0.75);
 }
 

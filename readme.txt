@@ -1,5 +1,5 @@
 Bookmark
-Theme Version: 1.0.0
+Theme Version: 1.0.1
 Author: Michael Van Den Berg 
 Author URL: https://michaelvandenberg.com/
 
@@ -7,7 +7,7 @@ Author URL: https://michaelvandenberg.com/
 === Description ===
 --------------------
 
-A free blogging theme with nice typography.
+A free blogging theme with nice typography and customizable colors.
 
 
 --------------------
@@ -17,7 +17,7 @@ A free blogging theme with nice typography.
 Bookmark WordPress Theme, Copyright 2016 Michael Van Den Berg.
 Bookmark is distributed under the terms of the GNU GPL license 3.0 or later.
 
-Bookmark is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Bookmark is based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc.
 
 
 --------------------
@@ -62,20 +62,44 @@ Bookmark is based on Underscores http://underscores.me/, (C) 2012-2016 Automatti
 
 -- Other.
 *
-*  Based on Underscores, Copyright (C) 2012-2016 Automattic, Inc.
+*  Based on Underscores, Copyright (C) 2012-2017 Automattic, Inc.
 *  URL: http://underscores.me/
 *  License: GNU GPL License 2.0 [or later] / https://www.gnu.org/licenses/gpl-2.0.html
 *
-*  Normalize.css, Copyright (C) 2012-2016 Nicolas Gallagher and Jonathan Neal.
+*  Normalize.css, Copyright (C) 2012-2017 Nicolas Gallagher and Jonathan Neal.
 *  URL: http://necolas.github.io/normalize.css/
 *  License: MIT License / http://opensource.org/licenses/MIT
 *
+*  Waves.js, Copyright (C) 2014-2017 Alfiana E. Sibuea.
+*  URL: http://fian.my.id/Waves/
+*  License: MIT License / http://opensource.org/licenses/MIT
+*
+
+
+--------------------
+=== Issues ===
+--------------------
+
+1. Weird color flickering when hovering over social icons in Safari 10.0.3 (works fine in Chrome, FireFox and Opera).
+2. Strange transition in menu lines animation in Safari (again, works fine in Chrome, FireFox and Opera).
+3. Erratic behaviour of developer (that's me) after discovering these "bugs".
 
 
 --------------------
 === Changelog ===
 --------------------
 
+*
+* 1.0.1 / 19.03.2016
+* - Replaced 'alt' => get_the_title() with 'alt' => the_title_attribute( 'echo=0' ) in template-tags.php.
+* - Changed "date( 'Y' )"" to date_i18n( __( 'Y', 'bookmark' ) )" in site-info.php.
+* - Removed rtl.css in the document root folder.
+* - Added copyright for waves.js in the readme file.
+* - Moved "Comments are closed." message in comments.php down a few lines to a more logical location.
+* - Accessibility fix: clicking back-to-top button moves focus to the top of the site.
+* - Header overlay colors and the link color can now be customized.
+* - Fixed content width for search results.
+* - Set "default-text-color" for header text color.
 *
 * 1.0.0 / 26.11.2016
 * - Changed theme URI to: https://michaelvandenberg.com/themes/#bookmark

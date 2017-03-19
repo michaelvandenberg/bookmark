@@ -9,8 +9,8 @@
 	--------------------------------------------------------------*/
 	
 	// Check distance to top and display back-to-top.
-	$(window).scroll(function(){
-		if ($(this).scrollTop() > 800) {
+	$( window ).scroll( function(){
+		if ($( this ).scrollTop() > 800 ) {
 			$( '.back-to-top' ).addClass( 'show-back-to-top' );
 		} else {
 			$( '.back-to-top' ).removeClass( 'show-back-to-top' );
@@ -18,8 +18,14 @@
 	});
 
 	// Click event to scroll to top.
-	$( '.back-to-top, .search-toggle' ).click(function(){
-		$( 'html, body' ).animate({scrollTop : 0},800);
+	$( '.back-to-top' ).click(function(){
+		$( 'html, body' ).animate( { scrollTop : 0 },800 );
+
+		// Move focus to top of page.
+		$( this ).on( 'blur', function() {
+			$( '#page' ).focus();
+		});
+
 		return false;
 	});
 
@@ -58,6 +64,7 @@
 	$( '.comments-link' ).wrapInner( '<span class="comments-link-text"></span>');
 
 	// Attach and intitialize Waves.
+	/* globals Waves */
 	Waves.attach('.nav-previous a, .nav-next a');
 	Waves.attach('.comments-link', ['waves-button', 'waves-float']);
 	Waves.init();

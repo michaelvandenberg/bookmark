@@ -72,21 +72,19 @@ if ( post_password_required() ) {
 				</div>
 			</div>
 		<?php
-		endif; // Check for have_comments().
-
-
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'bookmark' ); ?></p>
-		<?php
-		endif;
-
-		?>
+		endif; // Check for have_comments(). ?>
 
 	<div class="comment-form-container">
 		<div class="comment-form-inner">
-			<?php comment_form(); ?>
+			<?php comment_form();
+
+			// If comments are closed and there are comments, let's leave a little note, shall we?
+			if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+
+				<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'bookmark' ); ?></p>
+			<?php
+			endif;
+			?>
 		</div>
 	</div>
 </div><!-- #comments -->

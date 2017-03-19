@@ -4,7 +4,7 @@
 		<?php if ( $custom_copyright ) { ?>
 			<div class="copyright custom"><?php echo esc_html( $custom_copyright ); ?></div>
 		<?php } else { ?>
-			<div class="copyright"><span class="symbol">&copy; </span><?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a><span class="sep"> – </span><span class="description"><?php bloginfo( 'description' ); ?>.</span></div>
+			<div class="copyright"><span class="symbol">&copy; </span><?php echo date_i18n( __( 'Y', 'bookmark' ) ); ?> <a href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a><span class="sep"> – </span><span class="description"><?php bloginfo( 'description' ); ?>.</span></div>
 		<?php } ?>
 		<span class="generator"><?php echo esc_html__( 'Powered by ', 'bookmark' ) ?><a href="<?php echo esc_url( __( 'http://wordpress.org/', 'bookmark' ) ); ?>" rel="generator">WordPress</a></span>
 		<span class="sep"> | </span>

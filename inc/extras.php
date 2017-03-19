@@ -81,3 +81,34 @@ function bookmark_post_nav_background() {
 	wp_add_inline_style( 'bookmark-style', $css );
 }
 add_action( 'wp_enqueue_scripts', 'bookmark_post_nav_background' );
+
+/**
+ * Convert hex color to rgba. Used for color conversion in customizer.php.
+ *
+ * @param string $color.
+ * @return string.
+ */
+function bookmark_hex2rgba( $color, $alpha ) {
+	if ( preg_match('|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) ) {
+		
+		$hex = str_replace("#", "", $color);
+
+		if (strlen( $hex ) == 3) {
+			$r = hexdec(substr($hex,0,1).substr($hex,0,1));
+			$g = hexdec(substr($hex,1,1).substr($hex,1,1));
+			$b = hexdec(substr($hex,2,1).substr($hex,2,1));
+		} else {
+			$r = hexdec(substr($hex,0,2));
+			$g = hexdec(substr($hex,2,2));
+			$b = hexdec(substr($hex,4,2));
+		}
+
+		$color = "rgba({$r}, {$g}, {$b}, {$alpha})";
+
+		return $color;
+	}
+
+	else {
+		return '';
+	}
+}

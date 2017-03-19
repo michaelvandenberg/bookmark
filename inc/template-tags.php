@@ -151,14 +151,14 @@ function bookmark_post_thumbnail() {
 	<?php if ( is_singular() ) : ?>
 
 		<div class="post-thumbnail">
-			<?php the_post_thumbnail( $featured, array( 'alt' => get_the_title() ) ); ?>
+			<?php the_post_thumbnail( $featured, array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
 		</div><!-- .post-thumbnail -->
 
 	<?php else : ?>
 
 		<div class="post-thumbnail">
 			<a class="post-thumbnail-link" href="<?php esc_url( the_permalink() ); ?>" aria-hidden="true">
-				<?php the_post_thumbnail( $featured, array( 'alt' => get_the_title() ) ); ?>
+				<?php the_post_thumbnail( $featured, array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
 			</a>
 		</div><!-- .post-thumbnail -->
 
