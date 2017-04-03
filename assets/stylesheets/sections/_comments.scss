@@ -70,11 +70,28 @@
 	display: block;
 }
 .reply {
-	padding: 0.5rem 1rem;
 	line-height:1em;
 }
-.comment-reply-link {
+.comment-reply-link,
+.comment-awaiting-moderation {
 	@include font-size(1);
+}
+
+.comments-link:hover,
+.comments-link:focus,
+.comment-reply-link:hover,
+.comment-reply-link:focus {
+	color: #fff;
+}
+
+.comment-reply-link:hover,
+.comment-reply-link:focus {
+	box-shadow: 0px 8px 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+.comment-awaiting-moderation {
+	margin-bottom: 0;
+	font-weight: bold;
 }
 
 /* Comment form. */
@@ -126,4 +143,15 @@ textarea#comment:focus {
 
 .comment-subscription-form {
 	margin-top: 1.5em;
+}
+
+.comment.depth-1 .comment-respond {
+	padding-bottom: 1.5em;
+}
+
+.comment.depth-2 .comment-respond,
+.comment.depth-3 .comment-respond,
+.comment.depth-4 .comment-respond,
+.comment.depth-5 .comment-respond {
+	padding: 0 1.5em 1.5em 1.5em;
 }

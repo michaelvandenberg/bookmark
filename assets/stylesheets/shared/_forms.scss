@@ -132,6 +132,7 @@ textarea {
 			&:hover,
 			&:focus {
 				color: white;
+				box-shadow: none;
 				transform: scale(1.5);
 			}
 		}

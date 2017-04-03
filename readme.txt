@@ -1,5 +1,5 @@
 Bookmark
-Theme Version: 1.0.1
+Theme Version: 1.0.2
 Author: Michael Van Den Berg 
 Author URL: https://michaelvandenberg.com/
 
@@ -89,6 +89,14 @@ Bookmark is based on Underscores http://underscores.me/, (C) 2012-2017 Automatti
 === Changelog ===
 --------------------
 
+*
+* 1.0.2 / 03.04.2016
+* - Added some padding to the comment form of the child comments.
+* - Fixed box-shadow on primary search-submit hover and focus.
+* - Increased box-shadow for input buttons on hover.
+* - Increased contrast between links and background on child comments.
+* - Increased contrast between text and background for the back-to-top link.
+* - And some more minor tweaks to the scss/css.
 *
 * 1.0.1 / 19.03.2016
 * - Replaced 'alt' => get_the_title() with 'alt' => the_title_attribute( 'echo=0' ) in template-tags.php.
